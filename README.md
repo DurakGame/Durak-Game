@@ -1,2 +1,2 @@
-# Duraka-Game
-My Duraka Card Game
+# Durak-Game
+My Durak Card Game
