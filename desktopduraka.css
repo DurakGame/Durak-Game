@@ -27,7 +27,7 @@
 
 .cardy{
     border-radius: 5%;
-    font-size: 50px;
+    font-size: 25px;
     height: 200px;
     
     border: 2px black solid;
@@ -141,7 +141,7 @@ border: 2px blue solid;
 }
 #congrats{
   visibility: hidden;
-  font-size: large;
+  font-size: 30px;
   border: red 5px solid;
   height: 0px;
   width: 0px;
