@@ -2100,6 +2100,8 @@ toobigcard.style.color="black"
 toobigcard.style.marginTop="0%"
 if(playerdeck.length<6){
     for(let i=0;i<document.getElementById('playersdeck').children.length;i++){
+        document.getElementById("cardnum"+(i)).style.width="100%"
+        toobigcard.style.width="100%"
        // console.log(document.getElementById("rnum"+i).innerHTML)
       //  document.getElementById("cardnum"+(i)).style.height="90%"
     }
@@ -2107,6 +2109,8 @@ if(playerdeck.length<6){
     if(playerdeck.length<12){
          for(let i=0;i<document.getElementById('playersdeck').children.length;i++){
        // console.log(document.getElementById("rnum"+i).innerHTML)
+             document.getElementById("cardnum"+(i)).style.width="100%"
+        toobigcard.style.width="100%"
         document.getElementById("cardnum"+(i)).style.height="75px"
              toobigcard.style.height="75px"
     }
@@ -2114,6 +2118,8 @@ if(playerdeck.length<6){
     for(let i=0;i<document.getElementById('playersdeck').children.length;i++){
        // console.log(document.getElementById("rnum"+i).innerHTML)
        document.getElementById("cardnum"+(i)).style.height="40px"
+           document.getElementById("cardnum"+(i)).style.width="100%"
+        toobigcard.style.width="100%"
         toobigcard.style.height="40px"
     }
 }}
