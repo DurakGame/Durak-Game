@@ -508,28 +508,28 @@ function Gamesetup(x){
           //  document.getElementById('bottom').style.backgroundColor='yellow'
         document.getElementById('bottom').style.backgroundImage= "url('spade.jpg')"
         document.getElementById('bottom').style.backgroundSize='contain'
-        document.getElementById('bottom').style.backgroundPosition='left -50px top 25px'
+        document.getElementById('bottom').style.backgroundPosition='left -25px top 25px'
         document.getElementById('bottom').style.backgroundRepeat='no-repeat'
     }
         if(deck.cards[deck.cards.length-1].suit=="♡"){
            // document.getElementById('bottom').style.backgroundColor='blue'
             document.getElementById('bottom').style.backgroundImage= "url('heart.png')"
             document.getElementById('bottom').style.backgroundSize='contain'
-            document.getElementById('bottom').style.backgroundPosition='left -50px top 25px'
+            document.getElementById('bottom').style.backgroundPosition='left -25px top 25px'
             document.getElementById('bottom').style.backgroundRepeat='no-repeat'
         }
         if(deck.cards[deck.cards.length-1].suit=="♢"){
             //document.getElementById('bottom').style.backgroundColor='red'
             document.getElementById('bottom').style.backgroundImage= "url('diamond.png')"
             document.getElementById('bottom').style.backgroundSize='contain'
-            document.getElementById('bottom').style.backgroundPosition='left -50px top 25px'
+            document.getElementById('bottom').style.backgroundPosition='left -25px top 25px'
             document.getElementById('bottom').style.backgroundRepeat='no-repeat'
         }
         if(deck.cards[deck.cards.length-1].suit=="♧"){
            // document.getElementById('bottom').style.backgroundColor='red'
             document.getElementById('bottom').style.backgroundImage= "url('club.jpg')"
             document.getElementById('bottom').style.backgroundSize='contain'
-            document.getElementById('bottom').style.backgroundPosition='left -50px top 25px'
+            document.getElementById('bottom').style.backgroundPosition='left -25px top 25px'
             document.getElementById('bottom').style.backgroundRepeat='no-repeat'
         }
         document.getElementById("bottomvalue").innerHTML=deck.cards[deck.cards.length-1].value+deck.cards[deck.cards.length-1].suit
