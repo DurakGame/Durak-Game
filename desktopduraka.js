@@ -3812,7 +3812,7 @@ if(robotkozars.length==0){
                      takenCards=[];rox=robotdeck.length
                     for(let i=(slotsfilled-1);i>-1;i--){
                         console.log('HERE'+i+''+document.getElementById('cardplayed'+i))
-                        if(document.getElementById('rplayed'+i)!=null){
+                        if(document.getElementById('rplayed'+i)!=undefined){
                             takenCards.push(document.getElementById('rplayed'+i).innerHTML )
                             Take1(document.getElementById('rplayed'+i))
                             }
