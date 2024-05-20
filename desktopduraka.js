@@ -12,6 +12,7 @@ let altidToClass="";
 let  takenCards=[]
 let takenCards2=[]
 let isGameover=false;
+let gimmeCard;
 //to do:
 //cant play more than one withotu errors
 //allow player to tskr cards 
@@ -1376,7 +1377,7 @@ function Movecard2(id){
                         if(document.getElementsByClassName('cardy')[j].style.borderColor=="yellow"){
                            let wwyellow=document.getElementsByClassName('cardy')[j].innerHTML
                            wwyellow=(wwyellow.slice(0,wwyellow.length-1))
-                         
+                         console.log("damn"+wwyellow)
                             if(wwyellow==ww[i]||wwyellow==wwredlist[i]){
                               //  document.getElementsByClassName('cardy')[j].style.height='230px'
                                  document.getElementsByClassName('cardy')[j].style.border="black 2px solid"
