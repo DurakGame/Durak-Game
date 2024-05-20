@@ -2077,6 +2077,11 @@ toobigcard.style.top="initial"
 toobigcard.style.backgroundImage="none"
 toobigcard.style.color="black"
 toobigcard.style.marginTop="0%"
+if(playerdeck.length<6){
+        toobigcard.style.height=document.getElementById("cardnum0").style.height
+    }else{
+        toobigcard.style.height -(.5* (document.getElementById('cardnum'+i).style.height-2*(Math.ceil(playerdeck.length/8)-5)))+'px'
+    }
 document.getElementById('playersdeck').appendChild(toobigcard)
 
 toobigcard.id='cardnum'+(document.getElementById("playersdeck").children.length-1)
