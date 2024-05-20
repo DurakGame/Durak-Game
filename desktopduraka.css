@@ -6,7 +6,7 @@
     grid-template-columns: auto auto;
 }
 #deck{
-   
+   font-size:25px;
     height: 300px;
     margin-right: 0px;
     /* margin-left: 20%; */
@@ -38,7 +38,7 @@ html {
 }
 #bottom{
 
-    
+    font-size:25px;
     height: 150px;
     margin-left: 0px;
   margin-top: 75px;
