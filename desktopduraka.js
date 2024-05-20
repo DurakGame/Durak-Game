@@ -1,4 +1,3 @@
-
 let Jack
 let Queen
 let King
@@ -2099,28 +2098,41 @@ toobigcard.style.backgroundImage="none"
 toobigcard.style.color="black"
 toobigcard.style.marginTop="0%"
 if(playerdeck.length<6){
-    for(let i=0;i<document.getElementById('playersdeck').children.length;i++){
-        document.getElementById("cardnum"+(i)).style.width="100%"
-        toobigcard.style.width="100%"
+     for(let i=0;i<document.getElementsByClassName('cardy').children.length;i++){
        // console.log(document.getElementById("rnum"+i).innerHTML)
-      //  document.getElementById("cardnum"+(i)).style.height="90%"
+             if(document.getElementsByClassName('cardy').children[i].id.includes("cardnum")){
+                         document.getElementById("cardnum"+(i)).style.height="100%"
+                 
+             document.getElementById("cardnum"+(i)).style.width="100%"
+             }
+        toobigcard.style.width="100%"
+
+             toobigcard.style.height="100%"
     }
 }else{
     if(playerdeck.length<12){
-         for(let i=0;i<document.getElementById('playersdeck').children.length;i++){
+         for(let i=0;i<document.getElementsByClassName('cardy').children.length;i++){
        // console.log(document.getElementById("rnum"+i).innerHTML)
+             if(document.getElementsByClassName('cardy').children[i].id.includes("cardnum")){
+                         document.getElementById("cardnum"+(i)).style.height="75px"
+                 
              document.getElementById("cardnum"+(i)).style.width="100%"
+             }
         toobigcard.style.width="100%"
-        document.getElementById("cardnum"+(i)).style.height="75px"
+
              toobigcard.style.height="75px"
     }
     }else{
-    for(let i=0;i<document.getElementById('playersdeck').children.length;i++){
+     for(let i=0;i<document.getElementsByClassName('cardy').children.length;i++){
        // console.log(document.getElementById("rnum"+i).innerHTML)
-       document.getElementById("cardnum"+(i)).style.height="40px"
-           document.getElementById("cardnum"+(i)).style.width="100%"
+             if(document.getElementsByClassName('cardy').children[i].id.includes("cardnum")){
+                         document.getElementById("cardnum"+(i)).style.height="40px"
+                 
+             document.getElementById("cardnum"+(i)).style.width="100%"
+             }
         toobigcard.style.width="100%"
-        toobigcard.style.height="40px"
+
+             toobigcard.style.height="40px"
     }
 }}
 document.getElementById('playersdeck').appendChild(toobigcard)
