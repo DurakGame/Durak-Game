@@ -2080,7 +2080,7 @@ toobigcard.style.marginTop="0%"
 if(playerdeck.length<6){
         toobigcard.style.height=document.getElementById("cardnum0").style.height
     }else{
-        toobigcard.style.height -(.5* (document.getElementById('cardnum'+i).style.height-2*(Math.ceil(playerdeck.length/8)-5)))+'px'
+        toobigcard.style.height =(.5* (document.getElementById('cardnum'+0).style.height-2*(Math.ceil(playerdeck.length/8)-5)))+'px'
     }
 document.getElementById('playersdeck').appendChild(toobigcard)
 
