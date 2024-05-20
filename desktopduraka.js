@@ -3698,7 +3698,7 @@ console.log(robotkozars)
 console.log(robotkozars.length )
 console.log(deck.cards.length)
 console.log(slotsfilled)
-if((document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[1]==kozar )&&( ((document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0])!='6'&&(document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0])!='7'&&(document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0])!='8'&&(document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0]-0)!='9'  )==false) ){
+if((document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[1]==kozar )&&(! ((document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0])!='6'&&(document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0])!='7'&&(document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0])!='8'&&(document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0]-0)!='9'  )==false) ){
   
 for(let i=0;i<robotkozars.length;i++){
     if(robotkozars[i].value==10||robotkozars[i].value>document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0] ){
