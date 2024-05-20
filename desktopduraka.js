@@ -1,4 +1,3 @@
-
 let Jack
 let Queen
 let King
@@ -507,30 +506,30 @@ function Gamesetup(x){
     }
         if(deck.cards[deck.cards.length-1].suit=="♤"){
           //  document.getElementById('bottom').style.backgroundColor='yellow'
-        document.getElementById('bottom').style.backgroundImage= "url('spade.jpg')"
+        document.getElementById('bottom').style.backgroundImage= "url('spades.jpeg')"
         document.getElementById('bottom').style.backgroundSize='contain'
-        document.getElementById('bottom').style.backgroundPosition='left -25px top 40px'
+        document.getElementById('bottom').style.backgroundPosition='left -50px top 25px'
         document.getElementById('bottom').style.backgroundRepeat='no-repeat'
     }
         if(deck.cards[deck.cards.length-1].suit=="♡"){
            // document.getElementById('bottom').style.backgroundColor='blue'
-            document.getElementById('bottom').style.backgroundImage= "url('heart.png')"
+            document.getElementById('bottom').style.backgroundImage= "url('spades.jpeg')"
             document.getElementById('bottom').style.backgroundSize='contain'
-            document.getElementById('bottom').style.backgroundPosition='left -25px top 40px'
+            document.getElementById('bottom').style.backgroundPosition='left -50px top 25px'
             document.getElementById('bottom').style.backgroundRepeat='no-repeat'
         }
         if(deck.cards[deck.cards.length-1].suit=="♢"){
             //document.getElementById('bottom').style.backgroundColor='red'
-            document.getElementById('bottom').style.backgroundImage= "url('diamond.png')"
+            document.getElementById('bottom').style.backgroundImage= "url('spades.jpeg')"
             document.getElementById('bottom').style.backgroundSize='contain'
-            document.getElementById('bottom').style.backgroundPosition='left -25px top 40px'
+            document.getElementById('bottom').style.backgroundPosition='left -50px top 25px'
             document.getElementById('bottom').style.backgroundRepeat='no-repeat'
         }
         if(deck.cards[deck.cards.length-1].suit=="♧"){
            // document.getElementById('bottom').style.backgroundColor='red'
-            document.getElementById('bottom').style.backgroundImage= "url('club.jpg')"
+            document.getElementById('bottom').style.backgroundImage= "url('spades.jpeg')"
             document.getElementById('bottom').style.backgroundSize='contain'
-            document.getElementById('bottom').style.backgroundPosition='left -25px top 40px'
+            document.getElementById('bottom').style.backgroundPosition='left -50px top 25px'
             document.getElementById('bottom').style.backgroundRepeat='no-repeat'
         }
         document.getElementById("bottomvalue").innerHTML=deck.cards[deck.cards.length-1].value+deck.cards[deck.cards.length-1].suit
@@ -639,7 +638,7 @@ toggle++
   console.log(robotdeck[i].value)
   z.innerHTML=robotdeck[i].value+robotdeck[i].suit
   document.querySelector('#robotdeck').appendChild(z)
-  z.style.backgroundImage= "url('backOcard.png')";
+  z.style.backgroundImage= "url('Downloads/backOcard.png')";
   z.style.backgroundPosition="center";
   z.style.backgroundRepeat="no-repeat";z.style.backgroundSize="cover";
   z.style.color="transparent"
@@ -976,7 +975,7 @@ console.log(robotdeck)
     z.innerHTML=robotdeck[i].value+robotdeck[i].suit
    document.querySelector('#robotdeck').appendChild(z)
    
-   z.style.backgroundImage= "url('backOcard.png')";
+   z.style.backgroundImage= "url('Downloads/backOcard.png')";
    z.style.backgroundPosition="center";
    z.style.backgroundRepeat="no-repeat";z.style.backgroundSize="cover";
    z.style.color="transparent"
@@ -1286,7 +1285,7 @@ toggle++
     console.log(robotdeck[i].value)
     z.innerHTML=robotdeck[i].value+robotdeck[i].suit
     document.querySelector('#robotdeck').appendChild(z)
-    z.style.backgroundImage= "url('backOcard.png')";
+    z.style.backgroundImage= "url('Downloads/backOcard.png')";
     z.style.backgroundPosition="center";
     z.style.backgroundRepeat="no-repeat";z.style.backgroundSize="cover";
     z.style.color="transparent"
@@ -1296,7 +1295,10 @@ toggle++
     robotnormals.push(robotdeck[i])
     }
 //cpends
-
+if(robotdeck.length==0){
+    document.getElementById("infobox").innerHTML="You lost!"
+isGameover=true
+}
 
 console.log(playerdeck.length)
 //Start()
@@ -1730,9 +1732,17 @@ for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
                      document.getElementById('card'+slotsfilled).style.border="initial"
                      slotsfilled++
                     toggle++
+                    if(playerdeck.length==0){
+                            document.getElementById("infobox").innerHTML="You won!"
+                        isGameover=true
+                        setTimeout(function(){
+                            GameOver()
+                         }, 1000);
+                    }else{
                     Ourturn=false
                     console.log(playerdeck)
                     RobotTurn(document.getElementsByClassName('cardy')[i].innerHTML)
+                    }
                     } else{
                         console.log(ww[i])
                         console.log(wwredlist[i])
@@ -2078,25 +2088,6 @@ toobigcard.style.top="initial"
 toobigcard.style.backgroundImage="none"
 toobigcard.style.color="black"
 toobigcard.style.marginTop="0%"
-if(playerdeck.length<6){
-    for(let i=0;i<playerdeck.length;i++){
-       // console.log(document.getElementById("rnum"+i).innerHTML)
-      //  document.getElementById("cardnum"+(i)).style.height="90%"
-    }
-}else{
-    if(playerdeck.length<12){
-         for(let i=0;i<playerdeck.length;i++){
-       // console.log(document.getElementById("rnum"+i).innerHTML)
-        document.getElementById("cardnum"+(i)).style.height="75px"
-             toobigcard.style.height="75px"
-    }
-    }else{
-    for(let i=0;i<playerdeck.length;i++){
-       // console.log(document.getElementById("rnum"+i).innerHTML)
-       document.getElementById("cardnum"+(i)).style.height="40px"
-        toobigcard.style.height="40px"
-    }
-}}
 document.getElementById('playersdeck').appendChild(toobigcard)
 
 toobigcard.id='cardnum'+(document.getElementById("playersdeck").children.length-1)
@@ -2219,7 +2210,7 @@ function Take1(toobigcard){
     }
 
    document.getElementById('robotdeck').appendChild(toobigcard)
-   toobigcard.style.backgroundImage= "url('backOcard.png')";
+   toobigcard.style.backgroundImage= "url('Downloads/backOcard.png')";
   // toobigcard.style.width="70%"
    toobigcard.style.backgroundPosition="center";
    toobigcard.style.backgroundRepeat="no-repeat";toobigcard.style.backgroundSize="cover";
@@ -2490,7 +2481,7 @@ toggle++
     console.log(robotdeck[i].value)
     z.innerHTML=robotdeck[i].value+robotdeck[i].suit
     document.querySelector('#robotdeck').appendChild(z)
-    z.style.backgroundImage= "url('backOcard.png')";
+    z.style.backgroundImage= "url('Downloads/backOcard.png')";
     z.style.backgroundPosition="center";
     z.style.backgroundRepeat="no-repeat";z.style.backgroundSize="cover";
     z.style.color="transparent"
@@ -2618,7 +2609,7 @@ smallest.push(robotdeck[i].value)
                        first='robot'
                          
                     document.getElementById('infobox').innerHTML="Computer has smallest kozar, computer starts"
-                    
+                    Start()
                     }
                 }
                 if(playerdeck[i].suit==kozar){
@@ -2652,6 +2643,7 @@ console.log(robotdeck)
 let index
 let robotnormalnumbers=[]
 function Splay(card,index){
+    
     console.log("SPALAY")
 console.log(index)
     if(slotsfilled==0){
@@ -2698,12 +2690,19 @@ console.log(index)
                                 console.log('splice and dice')                }      
                                       }    
                                 } 
-                             
+                    
                 document.querySelector('#card'+slotsfilled).appendChild(document.getElementsByClassName('cardy')[altidToClass])
  document.querySelector('#card'+slotsfilled).children[0].style.backgroundImage="none"
  document.querySelector('#card'+slotsfilled).children[0].style.width="70%"
  document.querySelector('#card'+slotsfilled).children[0].style.color="black"
 document.querySelector('#card'+slotsfilled).children[0].style.height="90%";
+if(robotdeck.length==0){
+    document.getElementById("infobox").innerHTML="You lost!"
+    setTimeout(function(){
+        GameOver()
+     }, 1000);
+isGameover=true
+}
 // document.querySelector('#card'+slotsfilled).children[0].style.marginTop="37%";
  // document.querySelector('#card'+slotsfilled).children[0].style.borderBottom="none";
               //  document.getElementById('card'+slotsfilled).style.position="initial"
@@ -4147,3 +4146,4 @@ function PlayerNum(x){
       //document.getElementById('columnOne').style.visibility="visible"
 Gamesetup(x)
 }
+
