@@ -15,10 +15,7 @@
 
 }
 html {
-    zoom: 0.67; /* Old IE only */
-    -moz-transform: scale(0.67);
-    -webkit-transform: scale(0.67);
-    transform: scale(0.67);
+    zoom: 0.67; 
 }
 .slot{
   height: 100%;
