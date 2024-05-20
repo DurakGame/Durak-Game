@@ -1,0 +1,208 @@
+#game{
+    visibility: hidden;
+    width: 85%;
+    margin-left: 8%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+#deck{
+   
+    height: 300px;
+    margin-right: 0px;
+    /* margin-left: 20%; */
+    border: 2px black solid;
+    border-radius: 5%;
+
+}
+.slot{
+  height: 100%;
+}
+
+#playingarea{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    height: 300px;
+   
+}
+
+.cardy{
+    border-radius: 5%;
+    font-size: 50px;
+    height: 200px;
+    
+    border: 2px black solid;
+    
+}
+#bottom{
+
+    
+    height: 150px;
+    margin-left: 0px;
+  margin-top: 75px;
+  margin-bottom: 75px;
+    border-bottom: 2px red solid;
+    border-top: 2px red solid;
+    border-right: 2px red solid;
+    border-radius: 5%;
+}
+
+
+.sb6:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #00bfb6;
+  border-top: 10px solid #00bfb6;
+  border-bottom: 10px solid transparent;
+  left: -21px;
+  top: 6px;
+}
+
+.sb6:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 7px solid transparent;
+  border-right: 7px solid #fff;
+  border-top: 7px solid #fff;
+  border-bottom: 7px solid transparent;
+  left: -11px;
+  top: 10px;
+}
+
+
+.box1 {
+  width: 300px;
+  margin: 50px auto;
+  border: 4px solid #00bfb6;
+  padding: 20px;
+  text-align: center;
+  font-weight: 900;
+  color: #00bfb6;
+  font-family: arial;
+  position: relative;
+}
+
+#trash{
+    visibility: hidden;
+   height: 100px;
+   width: 120px;
+    border: 2px purple solid;
+    border-radius: 50%;
+}
+#trash p{
+  margin-top: 30%;
+  text-align: center;
+}
+#parentdeck{
+display: grid;
+grid-template-columns: 40% 20%;
+column-gap: 0px;
+
+
+height: 300px;
+border: 2px blue solid;
+
+}
+#rplayed0{
+  top: -175px;
+}
+#rplayed1{
+  top: -175px;
+}
+#TakeButton{
+  border-radius: 40%;
+    height: 100px;
+    border: 4px red solid;
+    width:120px;
+    text-align: center;
+}
+#rplayed2{
+  top: -175px;
+}
+#rplayed3{
+  top: -175px;
+  
+}
+#rplayed4{
+  top: -175px;
+}
+#rplayed5{
+  top: -175px;
+}
+#rplayed6{
+  top: -175px;
+}
+#rplayed7{
+  top: -175px;
+}
+#congrats{
+  visibility: hidden;
+  font-size: large;
+  border: red 5px solid;
+  height: 0px;
+  width: 0px;
+}
+#robotdeck{
+    margin-top: 0px;
+    display: grid;
+   /* flex-direction: row; */
+   grid-template-columns: auto auto auto auto auto auto;
+column-gap: 20px;
+row-gap: 80px;
+   width: 70%;
+   margin-left: 15%;
+   margin-right: 15%;
+    min-height:125px ;
+    }
+    #playersdeck{
+      margin-top: 0px;
+      display: grid;
+      grid-template-columns: auto auto auto auto auto auto;
+column-gap: 20px;
+row-gap: 10px;
+     width: 70%;
+     margin-left: 15%;
+     margin-right: 15%;
+  }
+  #playersdeck .cardy{
+    height: 250px;
+  }
+  #robotdeck .cardy{
+    top: 75px;
+  
+  }
+#card {
+  height: 200px;
+    
+  }
+  #endturn{
+    border-radius: 40%;
+    height: 100px;
+    border: 4px green solid;
+    width:120px;
+    text-align: center;
+  }
+  #endturn p{
+    margin-top: 25%;
+  }
+  #playersbuttons{
+    display:grid;
+    grid-template-columns: auto auto auto ;
+    margin-top: 50px;
+  }
+
+  #Big{
+   top: 0px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+  }
+  #columnOne{
+    display: grid;
+    grid-template-columns: 100%;
+    margin-top: 75px;
+    row-gap: 50px;
+  }
