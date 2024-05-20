@@ -2099,19 +2099,19 @@ toobigcard.style.backgroundImage="none"
 toobigcard.style.color="black"
 toobigcard.style.marginTop="0%"
 if(playerdeck.length<6){
-    for(let i=0;i<playerdeck.length;i++){
+    for(let i=0;i<document.getElementById('playersdeck').children.length;i++){
        // console.log(document.getElementById("rnum"+i).innerHTML)
       //  document.getElementById("cardnum"+(i)).style.height="90%"
     }
 }else{
     if(playerdeck.length<12){
-         for(let i=0;i<playerdeck.length;i++){
+         for(let i=0;i<document.getElementById('playersdeck').children.length;i++){
        // console.log(document.getElementById("rnum"+i).innerHTML)
         document.getElementById("cardnum"+(i)).style.height="75px"
              toobigcard.style.height="75px"
     }
     }else{
-    for(let i=0;i<playerdeck.length;i++){
+    for(let i=0;i<document.getElementById('playersdeck').children.length;i++){
        // console.log(document.getElementById("rnum"+i).innerHTML)
        document.getElementById("cardnum"+(i)).style.height="40px"
         toobigcard.style.height="40px"
