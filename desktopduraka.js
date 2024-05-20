@@ -2078,13 +2078,13 @@ toobigcard.style.top="initial"
 toobigcard.style.backgroundImage="none"
 toobigcard.style.color="black"
 toobigcard.style.marginTop="0%"
-if(playerdeck.length<=6){
+if(playerdeck.length<6){
     for(let i=0;i<playerdeck.length;i++){
        // console.log(document.getElementById("rnum"+i).innerHTML)
       //  document.getElementById("cardnum"+(i)).style.height="90%"
     }
 }else{
-    if(playerdeck.length<=12){
+    if(playerdeck.length<12){
          for(let i=0;i<playerdeck.length;i++){
        // console.log(document.getElementById("rnum"+i).innerHTML)
         document.getElementById("cardnum"+(i)).style.height="75px"
