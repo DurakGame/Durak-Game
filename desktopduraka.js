@@ -1,3 +1,4 @@
+
 let Jack
 let Queen
 let King
@@ -392,12 +393,11 @@ if(Ourturn==true){
     console.log(toggle)
     console.log(slotsfilled)
    if(toggle%2==1){
-z.style.border="2px black solid"
+z.style.border="8px yellow solid"
 document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
 toggle++
 } else{
-
-       z.style.border="8px yellow solid"
+z.style.border="2px black solid"
 document.getElementById('card'+slotsfilled).style.border="initial"
 toggle++
 }
@@ -407,16 +407,15 @@ toggle++
 if(Ourturn==true){
     console.log(toggle)
    if(toggle%2==1){
-document.getElementById(z.id).style.border="2px black solid"
+
+z.style.border="8px yellow solid"
 HumanBeat(document.getElementById(z.id))
 for(let i=0;i<slotsfilled;i++){
    // document.getElementById('rplayed'+i).style.border="4px blue dashed" may 4
 }
 toggle++
 } else{
-      
-z.style.border="8px yellow solid" 
-
+document.getElementById(z.id).style.border="2px black solid"
 for(let i=0;i<slotsfilled;i++){
     document.getElementById('rplayed'+i).style.border="2px black solid"
 }
@@ -425,12 +424,11 @@ toggle++
 }
 }} else{
     if(toggle%2==1){
-        document.getElementById(z.id).style.border="2px black solid"
-     
+        z.style.border="8px yellow solid"
         document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
         toggle++
         } else{
-      z.style.border="8px yellow solid"
+        z.style.border="2px black solid"
         document.getElementById('card'+slotsfilled).style.border="initial"
         toggle++
         }
@@ -556,13 +554,11 @@ if(Ourturn==true){
     console.log(toggle)
     console.log(slotsfilled)
     if(toggle%2==1){
-           z.style.border="2px black solid"
-        
+        z.style.border="8px yellow solid"
         document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
         toggle++
         } else{
-   
-           z.style.border="8px yellow solid"
+        z.style.border="2px black solid"
         document.getElementById('card'+slotsfilled).style.border="initial"
         toggle++
         }
@@ -573,15 +569,14 @@ if(Ourturn==true){
     console.log(toggle)
     
    if(toggle%2==1){
-
-       document.getElementById(z.id).style.border="2px black solid"
+z.style.border="8px yellow solid"
 HumanBeat(document.getElementById(z.id))
 for(let i=0;i<slotsfilled;i++){
  //   document.getElementById('rplayed'+i).style.border="4px blue dashed"may 4
 }
 toggle++
 } else{
-z.style.border="8px yellow solid"
+document.getElementById(z.id).style.border="2px black solid"
 for(let i=0;i<slotsfilled;i++){
     document.getElementById('rplayed'+i).style.border="2px black solid"
 }
@@ -591,12 +586,11 @@ toggle++
 }
 }} else{
     if(toggle%2==1){
-        
-        z.style.border="2px black solid"
+        z.style.border="8px yellow solid"
         document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
         toggle++
         } else{
-        z.style.border="8px yellow solid"
+        z.style.border="2px black solid"
         document.getElementById('card'+slotsfilled).style.border="initial"
         toggle++
         }
@@ -819,12 +813,11 @@ if(Ourturn==true){
     console.log(toggle)
     console.log(slotsfilled)
    if(toggle%2==1){
-z.style.border="2px black solid"
+z.style.border="8px yellow solid"
 document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
 toggle++
 } else{
-
-       z.style.border="8px yellow solid"
+z.style.border="2px black solid"
 document.getElementById('card'+slotsfilled).style.border="initial"
 toggle++
 }
@@ -835,15 +828,14 @@ if(Ourturn==true){
     console.log(toggle)
    if(toggle%2==1){
 
-
-       z.style.border="2px black solid"
+z.style.border="8px yellow solid"
 HumanBeat(document.getElementById(z.id))
 for(let i=0;i<slotsfilled;i++){
    // document.getElementById('rplayed'+i).style.border="4px blue dashed" may 4
 }
 toggle++
 } else{
-z.style.border="8px yellow solid"
+document.getElementById(z.id).style.border="2px black solid"
 for(let i=0;i<slotsfilled;i++){
     document.getElementById('rplayed'+i).style.border="2px black solid"
 }
@@ -852,13 +844,11 @@ toggle++
 }
 }} else{
     if(toggle%2==1){
-       z.style.border="2px black solid"
-        
+        z.style.border="8px yellow solid"
         document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
         toggle++
         } else{
-        
-        z.style.border="8px yellow solid"
+        z.style.border="2px black solid"
         document.getElementById('card'+slotsfilled).style.border="initial"
         toggle++
         }
@@ -1212,12 +1202,11 @@ if(Ourturn==true){
     console.log(toggle)
     console.log(slotsfilled)
    if(toggle%2==1){
-
-       z.style.border="2px black solid"
+z.style.border="8px yellow solid"
 document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
 toggle++
 } else{
-z.style.border="8px yellow solid"
+z.style.border="2px black solid"
 document.getElementById('card'+slotsfilled).style.border="initial"
 toggle++
 }
@@ -1227,7 +1216,8 @@ toggle++
 if(Ourturn==true){
     console.log(toggle)
    if(toggle%2==1){
-document.getElementById(z.id).style.border="2px black solid"
+
+z.style.border="8px yellow solid"
 HumanBeat(document.getElementById(z.id))
 
 for(let i=0;i<slotsfilled;i++){
@@ -1235,8 +1225,7 @@ for(let i=0;i<slotsfilled;i++){
 }
 toggle++
 } else{
-
-       z.style.border="8px yellow solid"
+document.getElementById(z.id).style.border="2px black solid"
 for(let i=0;i<slotsfilled;i++){
     document.getElementById('rplayed'+i).style.border="2px black solid"
 }
@@ -1245,12 +1234,11 @@ toggle++
 }
 }} else{
     if(toggle%2==1){
-       
-        document.getElementById(z.id).style.border="2px black solid"
+        z.style.border="8px yellow solid"
         document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
         toggle++
         } else{
-        z.style.border="8px yellow solid"
+        z.style.border="2px black solid"
         document.getElementById('card'+slotsfilled).style.border="initial"
         toggle++
         }
@@ -1356,12 +1344,11 @@ function Movecard2(id){
             if(slotsfilled==0){
             console.log(toggle)
            if(toggle%2==1){
-       document.getElementById(id).style.border="2px black solid"
+        document.getElementById(id).style.border="8px yellow solid"
         document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
     toggle++
     } else{
-        
-                document.getElementById(id).style.border="8px yellow solid"
+        document.getElementById(id).style.border="2px black solid"
         document.getElementById('card'+slotsfilled).style.border="initial"
         toggle++
     }
@@ -1440,13 +1427,12 @@ function Movecard2(id){
         console.log(toggle)
      //   console.log(slotsfilled)
        if(toggle%2==1){
-   
-           document.getElementById(z.id).style.border="2px black solid"
+    document.getElementById(z.id).style.border="8px yellow solid"
    
 
 toggle++
 } else{
-   document.getElementById(z.id).style.border="8px yellow solid"
+    document.getElementById(z.id).style.border="2px black solid"
    
     toggle++
 }
@@ -1591,12 +1577,11 @@ function MoveCard(id){
         console.log("fu")
         if(document.getElementById(id).parentElement=="parentsdeck"){
         if(toggle%2==1){
-       document.getElementById(id).style.border="2px black solid"
+     document.getElementById(id).style.border="8px yellow solid"
      document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
  toggle++
  } else{
-             document.getElementById(z.id).style.border="8px yellow solid"
-
+     document.getElementById(id).style.border="2px black solid"
      document.getElementById('card'+slotsfilled).style.border="initial"
      toggle++
  }
@@ -1821,12 +1806,11 @@ for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
     if(Ourturn==true){
         console.log(toggle)
        if(toggle%2==1){
-
-                document.getElementById(z.id).style.border="2px black solid"
+    document.getElementById(z.id).style.border="8px yellow solid"
     document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
 toggle++
 } else{
-     document.getElementById(z.id).style.border="8px yellow solid"
+    document.getElementById(z.id).style.border="2px black solid"
     document.getElementById('card'+slotsfilled).style.border="initial"
     toggle++
 }
@@ -1925,12 +1909,11 @@ function HumanTakeCaller(){
             console.log(toggle)
             console.log(slotsfilled)
            if(toggle%2==1){
-          z.style.border="2px black solid"
+        z.style.border="8px yellow solid"
         document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
         toggle++
         } else{
-  
-                   z.style.border="8px yellow solid"
+        z.style.border="2px black solid"
         document.getElementById('card'+slotsfilled).style.border="initial"
         toggle++
         }
