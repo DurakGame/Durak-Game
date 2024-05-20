@@ -975,7 +975,7 @@ console.log(robotdeck)
     z.innerHTML=robotdeck[i].value+robotdeck[i].suit
    document.querySelector('#robotdeck').appendChild(z)
    
-   z.style.backgroundImage= "url('Downloads/backOcard.png')";
+   z.style.backgroundImage= "url('backOcard.png')";
    z.style.backgroundPosition="center";
    z.style.backgroundRepeat="no-repeat";z.style.backgroundSize="cover";
    z.style.color="transparent"
@@ -1285,7 +1285,7 @@ toggle++
     console.log(robotdeck[i].value)
     z.innerHTML=robotdeck[i].value+robotdeck[i].suit
     document.querySelector('#robotdeck').appendChild(z)
-    z.style.backgroundImage= "url('Downloads/backOcard.png')";
+    z.style.backgroundImage= "url('backOcard.png')";
     z.style.backgroundPosition="center";
     z.style.backgroundRepeat="no-repeat";z.style.backgroundSize="cover";
     z.style.color="transparent"
@@ -2199,7 +2199,7 @@ function Take1(toobigcard){
     }
 
    document.getElementById('robotdeck').appendChild(toobigcard)
-   toobigcard.style.backgroundImage= "url('Downloads/backOcard.png')";
+   toobigcard.style.backgroundImage= "url('backOcard.png')";
   // toobigcard.style.width="70%"
    toobigcard.style.backgroundPosition="center";
    toobigcard.style.backgroundRepeat="no-repeat";toobigcard.style.backgroundSize="cover";
@@ -2470,7 +2470,7 @@ toggle++
     console.log(robotdeck[i].value)
     z.innerHTML=robotdeck[i].value+robotdeck[i].suit
     document.querySelector('#robotdeck').appendChild(z)
-    z.style.backgroundImage= "url('Downloads/backOcard.png')";
+    z.style.backgroundImage= "url('backOcard.png')";
     z.style.backgroundPosition="center";
     z.style.backgroundRepeat="no-repeat";z.style.backgroundSize="cover";
     z.style.color="transparent"
