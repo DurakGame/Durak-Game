@@ -2077,11 +2077,25 @@ toobigcard.style.top="initial"
 toobigcard.style.backgroundImage="none"
 toobigcard.style.color="black"
 toobigcard.style.marginTop="0%"
-if(playerdeck.length<6){
-        toobigcard.style.height=document.getElementById("cardnum0").style.height
-    }else{
-        toobigcard.style.height =(.5* (document.getElementById('cardnum'+0).style.height-2*(Math.ceil(playerdeck.length/8)-5)))+'px'
+if(playerdeck.length<=6){
+    for(let i=0;i<playerdeck.length;i++){
+       // console.log(document.getElementById("rnum"+i).innerHTML)
+      //  document.getElementById("cardnum"+(i)).style.height="90%"
     }
+}else{
+    if(playerdeck.length<=12){
+         for(let i=0;i<playerdeck.length;i++){
+       // console.log(document.getElementById("rnum"+i).innerHTML)
+        document.getElementById("cardnum"+(i)).style.height="75px"
+             toobigcard.style.height="75px"
+    }
+    }else{
+    for(let i=0;i<playerdeck.length;i++){
+       // console.log(document.getElementById("rnum"+i).innerHTML)
+       document.getElementById("cardnum"+(i)).style.height="40px"
+        toobigcard.style.height="40px"
+    }
+}}
 document.getElementById('playersdeck').appendChild(toobigcard)
 
 toobigcard.id='cardnum'+(document.getElementById("playersdeck").children.length-1)
