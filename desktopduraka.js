@@ -389,7 +389,7 @@ for(let i=playerdeck.length;i<6;i++){
     console.log('hey')
     console.log(z.id)
     console.log(z)
-        gimmeCard=z.innerHTML[0]
+        gimmeCard=z.innerHTML
 if(Ourturn==true){
     console.log(toggle)
     console.log(slotsfilled)
@@ -550,7 +550,7 @@ function Gamesetup(x){
     if(testerForMoveCard()==true){
     console.log('hey')
     console.log(z.id)
-         gimmeCard=z.innerHTML[0]
+         gimmeCard=z.innerHTML
     console.log(z)
 
 if(Ourturn==true){
@@ -807,7 +807,7 @@ z.id="cardnum"+i
 //  z.setAttribute("onclick","MoveCard("+this.id+")"); slashed 12/25 10:05pm
 //cp from same tiem
 z.onclick=function MoveCard(){ 
-     gimmeCard=z.innerHTML[0]
+     gimmeCard=z.innerHTML
     console.log(Ourturn)
     if(!TakingNow) {if(testerForMoveCard()==true){
     console.log('hey')
@@ -1380,11 +1380,11 @@ function Movecard2(id){
                     for(let j=0;j<document.getElementsByClassName('cardy').length;j++){
                         if(document.getElementsByClassName('cardy')[j].style.borderColor=="yellow"){
                            let wwyellow=document.getElementsByClassName('cardy')[j].innerHTML
-                           wwyellow=(wwyellow.slice(0,wwyellow.length-1))
+                         //  wwyellow=(wwyellow.slice(0,wwyellow.length-1))
                              console.log("damn"+wwyellow)
                             wwyellow=gimmeCard
                         
-                            if(wwyellow==ww[i]||wwyellow==wwredlist[i]||ww[i].includes(wwyellow)||wwredlist[i].includes(wwyellow)){
+                            if(wwyellow.substring(0,1)==ww[i]||wwyellow.substring(0,1)==wwredlist[i]){
                               //  document.getElementsByClassName('cardy')[j].style.height='230px'
                                  document.getElementsByClassName('cardy')[j].style.border="black 2px solid"
                                 document.querySelector('#card'+slotsfilled).style.width='130px'
@@ -1718,12 +1718,12 @@ for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
                     if(document.getElementsByClassName('cardy')[j].style.borderColor=="yellow"){
                                             wwyellow=document.getElementsByClassName('cardy')[j].innerHTML
                         
-                                           wwyellow=(wwyellow.slice(0,wwyellow.length-1))
+                                          // wwyellow=(wwyellow.slice(0,wwyellow.length-1))
                     }
                    console.log(wwyellow)
                  console.log(ww[i])
                  console.log(wwredlist[i])
-                    if(wwyellow==ww[i].substring(0,1)||wwyellow==wwredlist[i].substring(0,1)){
+                    if(wwyellow.substring(0,1)==ww[i].substring(0,1)||wwyellow.substring(0,1)==wwredlist[i].substring(0,1)){
 
                       //  document.getElementsByClassName('cardy')[j].style.height='230px'
                          document.getElementsByClassName('cardy')[j].style.border="black 2px solid"
@@ -1919,7 +1919,7 @@ function HumanTakeCaller(){
             if(!TakingNow) {if(testerForMoveCard()==true){
             console.log('hey')
             console.log(z.id)
-            gimmeCard=z.innerHTML[0]
+            gimmeCard=z.innerHTML
             console.log(z)
         if(Ourturn==true){
             console.log(toggle)
@@ -2528,7 +2528,7 @@ z.onclick=function MoveCard(){
     if(!TakingNow) {if(testerForMoveCard()==true){
     console.log('hey')
     console.log(z.id)
-    gimmeCard=z.innerHTML[0]
+    gimmeCard=z.innerHTML
     console.log(z)
 if(Ourturn==true){
     console.log(toggle)
