@@ -1708,6 +1708,7 @@ for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
                 if(document.getElementsByClassName('cardy')[j].style.borderColor=="yellow"){
                    let wwyellow=document.getElementsByClassName('cardy')[j].innerHTML
                    wwyellow=(wwyellow.slice(0,wwyellow.length-1))
+                   console.log("damn"+wwyellow)
                  
                     if(wwyellow==ww[i]||wwyellow==wwredlist[i]){
                       //  document.getElementsByClassName('cardy')[j].style.height='230px'
