@@ -2488,6 +2488,42 @@ if((document.getElementById('deck').innerHTML-(slotsfilled*2))<0){
 }
 AllinOneRestock(playerdeck)
 AllinOneRestock(robotdeck)
+if(playerdeck.length<6){
+    for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+       console.log(document.getElementsByClassName('cardy')[i].id)
+        
+            if(document.getElementsByClassName('cardy')[i].id.includes("cardnum")){
+                        document.getElementsByClassName("cardy")[i].style.height="100%"
+                
+            document.getElementsByClassName("cardy")[i].style.width="100%"
+            }
+     
+          
+   }
+}else{
+   if(playerdeck.length<12){
+        for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+              console.log(document.getElementsByClassName('cardy')[i].id)
+        
+      // console.log(document.getElementById("rnum"+i).innerHTML)
+            if(document.getElementsByClassName('cardy')[i].id.includes("cardnum")){
+                        document.getElementsByClassName("cardy")[i].style.height="75px"
+                
+            document.getElementsByClassName("cardy")[i].style.width="100%"
+            }
+      
+   }
+   }else{
+    for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+      // console.log(document.getElementById("rnum"+i).innerHTML)
+            if(document.getElementsByClassName('cardy')[i].id.includes("cardnum")){
+                        document.getElementsByClassName("cardy")[i].style.height="40px"
+                
+            document.getElementsByClassName("cardy")[i].style.width="100%"
+            }
+      
+   }
+}}
 slotsfilled=0
 console.log(deck.cards)
 console.log(robotdeck)
