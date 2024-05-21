@@ -2146,7 +2146,7 @@ toobigcard.style.position="relative"
 toobigcard.style.left="initial"
 toobigcard.style.top="initial"
 */
-toobigcard.style.top="initial"
+//toobigcard.style.top="initial"
 toobigcard.style.backgroundImage="none"
 toobigcard.style.color="black"
 toobigcard.style.marginTop="0%"
