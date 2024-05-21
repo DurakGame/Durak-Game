@@ -18,7 +18,10 @@ html {
     zoom: 0.67; 
 }
 .slot{
+    max-height:300px;
   height: 100%;
+    
+    max-height:300px;
 }
 
 #playingarea{
