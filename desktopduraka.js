@@ -2861,6 +2861,7 @@ let index
 let robotnormalnumbers=[]
 function Splay(card,index){
     console.log("SPALAY")
+    console.log(card)
 console.log(index)
     if(slotsfilled==0){
         //cp
@@ -2868,6 +2869,7 @@ console.log(index)
             if( document.getElementsByClassName('cardy')[i].innerHTML==(card.value+card.suit) ){
                 //if error with this part, possibly alter to make a new altidtoclass, altidtoclass2
                 altidToClass=i;
+                console.log(document.getElementsByClassName('cardy')[i].innerHTML)
             } else{
                 console.log(document.getElementsByClassName('cardy')[i].innerHTML)
                 //console.log(ops[0].value+ops[0].suit)
@@ -2878,6 +2880,7 @@ console.log(index)
    
     // document.getElementsByClassName('cardy')[altidToClass].style.position='relative'
      //document.getElementsByClassName('cardy')[altidToClass].style.top='75px'
+     console.log( document.getElementsByClassName('cardy')[altidToClass].innerHTML)
     document.getElementsByClassName('cardy')[altidToClass].id='rplayed'+(slotsfilled)
     
      console.log(document.getElementById('rplayed'+(slotsfilled)))  
