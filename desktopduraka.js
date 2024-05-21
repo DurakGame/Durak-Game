@@ -2307,7 +2307,7 @@ function Take1(toobigcard){
     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
       // console.log(document.getElementById("rnum"+i).innerHTML)
             if(document.getElementsByClassName('cardy')[i].id.includes("rnum")){
-                        document.getElementsByClassName("cardy").style.height="40px"
+                        document.getElementsByClassName("cardy")[i].style.height="40px"
                 
             document.getElementsByClassName("cardy")[i].style.width="100%"
             }
@@ -3902,6 +3902,7 @@ if(robotkozars.length==0){
                         takenCards.push(document.getElementById('rplayed'+i).innerHTML )
                         Take1(document.getElementById('rplayed'+i))
                         }
+                        console.log(i)
                         takenCards.push(document.getElementById('cardplayed'+i).innerHTML )
                     Take1(document.getElementById('cardplayed'+i))
                 }
