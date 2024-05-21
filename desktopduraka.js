@@ -389,6 +389,7 @@ for(let i=playerdeck.length;i<6;i++){
     console.log('hey')
     console.log(z.id)
     console.log(z)
+        gimmeCard=z.innerHTML[0]
 if(Ourturn==true){
     console.log(toggle)
     console.log(slotsfilled)
@@ -549,6 +550,7 @@ function Gamesetup(x){
     if(testerForMoveCard()==true){
     console.log('hey')
     console.log(z.id)
+         gimmeCard=z.innerHTML[0]
     console.log(z)
 if(Ourturn==true){
     console.log(toggle)
@@ -804,6 +806,7 @@ z.id="cardnum"+i
 //  z.setAttribute("onclick","MoveCard("+this.id+")"); slashed 12/25 10:05pm
 //cp from same tiem
 z.onclick=function MoveCard(){ 
+     gimmeCard=z.innerHTML[0]
     console.log(Ourturn)
     if(!TakingNow) {if(testerForMoveCard()==true){
     console.log('hey')
