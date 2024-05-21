@@ -2111,7 +2111,7 @@ if(playerdeck.length<6){
         console.log(document.getElementsByClassName('cardy')[i].id)
          
              if(document.getElementsByClassName('cardy')[i].id.includes("cardnum")){
-                         document.getElementById("cardnum"+(i)).style.height="100%"
+                         document.getElementsByClassName("cardy")[i].style.height="100%"
                  
              document.getElementsByClassName("cardy")[i].style.width="100%"
              }
