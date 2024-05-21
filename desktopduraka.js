@@ -2139,7 +2139,7 @@ if(playerdeck.length<6){
      for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
        // console.log(document.getElementById("rnum"+i).innerHTML)
              if(document.getElementsByClassName('cardy')[i].id.includes("cardnum")){
-                         document.getElementById("cardnum"+(i)).style.height="40px"
+                         document.getElementsByClassName("cardy")[i].style.height="40px"
                  
              document.getElementsByClassName("cardy")[i].style.width="100%"
              }
@@ -2307,7 +2307,7 @@ function Take1(toobigcard){
     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
       // console.log(document.getElementById("rnum"+i).innerHTML)
             if(document.getElementsByClassName('cardy')[i].id.includes("rnum")){
-                        document.getElementById("cardnum"+(i)).style.height="40px"
+                        document.getElementsByClassName("cardy").style.height="40px"
                 
             document.getElementsByClassName("cardy")[i].style.width="100%"
             }
