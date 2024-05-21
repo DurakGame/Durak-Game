@@ -3404,12 +3404,11 @@ document.getElementsByClassName('cardy')[altidToClass].id='rplayed'+(slotsfilled
    
 
     // document.getElementsByClassName('cardy')[altidToClass].style.backgroundImage="none"
-
+    document.getElementsByClassName('cardy')[altidToClass].style.position="relative"
+    document.getElementsByClassName('cardy')[altidToClass].style.backgroundImage="none"
+    document.getElementsByClassName('cardy')[altidToClass].style.color="black"
     document.getElementById('card'+(slotsfilled-1)).appendChild(document.getElementsByClassName('cardy')[altidToClass])
-    document.getElementById('card'+(slotsfilled-1)).children[1].style.position="relative"
-    document.getElementById('card'+(slotsfilled-1)).children[1].style.backgroundImage="none"
-    document.getElementById('card'+(slotsfilled-1)).children[1].style.color="black"
-    console.log( document.getElementById('card'+(slotsfilled-1)))
+    
    
    //let played=document.createElement
    if(robotdeck.length==0&&playerdeck.length==0){
