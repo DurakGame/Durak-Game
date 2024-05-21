@@ -1710,15 +1710,13 @@ for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
         for(let i=0;i<(slotsfilled);i++){
             for(let j=0;j<document.getElementsByClassName('cardy').length;j++){
                 console.log(document.getElementsByClassName('cardy')[j].innerHTML)
-               
-                   let wwyellow=document.getElementsByClassName('cardy')[j].innerHTML
-                   wwyellow=(wwyellow.slice(0,wwyellow.length-1))
-                    console.log("damn"+wwyellow)
-                    wwyellow=gimmeCard
+                let wwyellow=gimmeCard
+                if(document.getElementsByClassName('cardy')[j].id.includes("cardnum")&&document.getElementsByClassName('cardy')[j].innerHTML[0]==wwyellow){
+                
                    console.log(wwyellow)
                  console.log(ww[i])
                  console.log(wwredlist[i])
-                    if(wwyellow==ww[i]||wwyellow==wwredlist[i]||ww[i].includes(wwyellow)||wwredlist[i].includes(wwyellow)){
+                    if(wwyellow==ww[i].substring(0,1)||wwyellow==wwredlist[i].substring(0,1)){
                       //  document.getElementsByClassName('cardy')[j].style.height='230px'
                          document.getElementsByClassName('cardy')[j].style.border="black 2px solid"
                         document.querySelector('#card'+slotsfilled).style.width='130px'
@@ -1798,7 +1796,7 @@ for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
 
                         document.getElementById('infobox').innerHTML="Can't play this card"
                     }
-            
+                }
                 }
         }
 //PASTE HERE    
