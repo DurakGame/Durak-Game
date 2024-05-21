@@ -1714,10 +1714,10 @@ for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
                 let wwyellow=gimmeCard
                 
                 console.log(wwyellow)
-                if(document.getElementsByClassName('cardy')[j].id.includes("cardnum")&&document.getElementsByClassName('cardy')[j].innerHTML[0]==wwyellow||document.getElementsByClassName('cardy')[j].style.borderColor=="yellow"){
+                if((document.getElementsByClassName('cardy')[j].id.includes("cardnum")&&document.getElementsByClassName('cardy')[j].innerHTML==wwyellow)||document.getElementsByClassName('cardy')[j].style.borderColor=="yellow"){
                     if(document.getElementsByClassName('cardy')[j].style.borderColor=="yellow"){
                                             wwyellow=document.getElementsByClassName('cardy')[j].innerHTML
-                        
+                        console.log('x')
                                           // wwyellow=(wwyellow.slice(0,wwyellow.length-1))
                     }
                    console.log(wwyellow)
