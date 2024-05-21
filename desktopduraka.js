@@ -1,4 +1,3 @@
-
 let Jack
 let Queen
 let King
@@ -13,6 +12,7 @@ let altidToClass="";
 let  takenCards=[]
 let takenCards2=[]
 let isGameover=false;
+let gimmeCard;
 //to do:
 //cant play more than one withotu errors
 //allow player to tskr cards 
@@ -389,6 +389,7 @@ for(let i=playerdeck.length;i<6;i++){
     console.log('hey')
     console.log(z.id)
     console.log(z)
+        gimmeCard=z.innerHTML[0]
 if(Ourturn==true){
     console.log(toggle)
     console.log(slotsfilled)
@@ -549,6 +550,7 @@ function Gamesetup(x){
     if(testerForMoveCard()==true){
     console.log('hey')
     console.log(z.id)
+         gimmeCard=z.innerHTML[0]
     console.log(z)
 if(Ourturn==true){
     console.log(toggle)
@@ -804,6 +806,7 @@ z.id="cardnum"+i
 //  z.setAttribute("onclick","MoveCard("+this.id+")"); slashed 12/25 10:05pm
 //cp from same tiem
 z.onclick=function MoveCard(){ 
+     gimmeCard=z.innerHTML[0]
     console.log(Ourturn)
     if(!TakingNow) {if(testerForMoveCard()==true){
     console.log('hey')
@@ -1377,8 +1380,10 @@ function Movecard2(id){
                         if(document.getElementsByClassName('cardy')[j].style.borderColor=="yellow"){
                            let wwyellow=document.getElementsByClassName('cardy')[j].innerHTML
                            wwyellow=(wwyellow.slice(0,wwyellow.length-1))
-                         
-                            if(wwyellow==ww[i]||wwyellow==wwredlist[i]){
+                             console.log("damn"+wwyellow)
+                            wwyellow=gimmeCard
+                        
+                            if(wwyellow==ww[i]||wwyellow==wwredlist[i]||ww[i].includes(wwyellow)||wwredlist[i].includes(wwyellow)){
                               //  document.getElementsByClassName('cardy')[j].style.height='230px'
                                  document.getElementsByClassName('cardy')[j].style.border="black 2px solid"
                                 document.querySelector('#card'+slotsfilled).style.width='130px'
@@ -1705,11 +1710,15 @@ for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
         for(let i=0;i<(slotsfilled);i++){
             for(let j=0;j<document.getElementsByClassName('cardy').length;j++){
                 console.log(document.getElementsByClassName('cardy')[j].innerHTML)
-                if(document.getElementsByClassName('cardy')[j].style.borderColor=="yellow"){
+               
                    let wwyellow=document.getElementsByClassName('cardy')[j].innerHTML
                    wwyellow=(wwyellow.slice(0,wwyellow.length-1))
-                 
-                    if(wwyellow==ww[i]||wwyellow==wwredlist[i]){
+                    console.log("damn"+wwyellow)
+                    wwyellow=gimmeCard
+                   console.log(wwyellow)
+                 console.log(ww[i])
+                 console.log(wwredlist[i])
+                    if(wwyellow==ww[i]||wwyellow==wwredlist[i]||ww[i].includes(wwyellow)||wwredlist[i].includes(wwyellow)){
                       //  document.getElementsByClassName('cardy')[j].style.height='230px'
                          document.getElementsByClassName('cardy')[j].style.border="black 2px solid"
                         document.querySelector('#card'+slotsfilled).style.width='130px'
@@ -1790,7 +1799,7 @@ for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
                         document.getElementById('infobox').innerHTML="Can't play this card"
                     }
             
-                }}
+                }
         }
 //PASTE HERE    
 } else{
@@ -2099,22 +2108,44 @@ toobigcard.style.backgroundImage="none"
 toobigcard.style.color="black"
 toobigcard.style.marginTop="0%"
 if(playerdeck.length<6){
-    for(let i=0;i<playerdeck.length;i++){
-       // console.log(document.getElementById("rnum"+i).innerHTML)
-      //  document.getElementById("cardnum"+(i)).style.height="90%"
+     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+        console.log(document.getElementsByClassName('cardy')[i].id)
+         
+             if(document.getElementsByClassName('cardy')[i].id.includes("cardnum")){
+                         document.getElementsByClassName("cardy")[i].style.height="100%"
+                 
+             document.getElementsByClassName("cardy")[i].style.width="100%"
+             }
+        toobigcard.style.width="100%"
+
+             toobigcard.style.height="100%"
     }
 }else{
     if(playerdeck.length<12){
-         for(let i=0;i<playerdeck.length;i++){
+         for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+               console.log(document.getElementsByClassName('cardy')[i].id)
+         
        // console.log(document.getElementById("rnum"+i).innerHTML)
-        document.getElementById("cardnum"+(i)).style.height="75px"
+             if(document.getElementsByClassName('cardy')[i].id.includes("cardnum")){
+                         document.getElementsByClassName("cardy")[i].style.height="75px"
+                 
+             document.getElementsByClassName("cardy")[i].style.width="100%"
+             }
+        toobigcard.style.width="100%"
+
              toobigcard.style.height="75px"
     }
     }else{
-    for(let i=0;i<playerdeck.length;i++){
+     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
        // console.log(document.getElementById("rnum"+i).innerHTML)
-       document.getElementById("cardnum"+(i)).style.height="40px"
-        toobigcard.style.height="40px"
+             if(document.getElementsByClassName('cardy')[i].id.includes("cardnum")){
+                         document.getElementsByClassName("cardy")[i].style.height="40px"
+                 
+             document.getElementsByClassName("cardy")[i].style.width="100%"
+             }
+        toobigcard.style.width="100%"
+
+             toobigcard.style.height="40px"
     }
 }}
 document.getElementById('playersdeck').appendChild(toobigcard)
@@ -2237,17 +2268,54 @@ function Take1(toobigcard){
                                                        
                                              }}
     }
-
+    toobigcard.id='rnum'+(document.getElementById("robotdeck").children.length)//attention
    document.getElementById('robotdeck').appendChild(toobigcard)
    toobigcard.style.backgroundImage= "url('backOcard.png')";
   // toobigcard.style.width="70%"
    toobigcard.style.backgroundPosition="center";
    toobigcard.style.backgroundRepeat="no-repeat";toobigcard.style.backgroundSize="cover";
    toobigcard.style.color="transparent"
-   toobigcard.id='rnum'+(document.getElementById("robotdeck").children.length-1)
+
    console.log(robotdeck)
    console.log(document.getElementById('robotdeck'))
    console.log( document.getElementById("robotdeck").children.length)
+//    if(robotdeck.length<6){
+//     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+//        console.log(document.getElementsByClassName('cardy')[i].id)
+        
+//             if(document.getElementsByClassName('cardy')[i].id.includes("rnum")){
+//                         document.getElementsByClassName("cardy")[i].style.height="100%"
+                
+//             document.getElementsByClassName("cardy")[i].style.width="100%"
+//             }
+      
+//    }
+// }else{
+//    if(robotdeck.length<12){
+//         for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+//               console.log(document.getElementsByClassName('cardy')[i].id)
+        
+//       // console.log(document.getElementById("rnum"+i).innerHTML)
+//             if(document.getElementsByClassName('cardy')[i].id.includes("rnum")){
+//                         document.getElementsByClassName("cardy")[i].style.height="60px"
+                
+//             document.getElementsByClassName("cardy")[i].style.width="100%"
+//             }
+      
+//    }
+//    }else{
+//     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+//       // console.log(document.getElementById("rnum"+i).innerHTML)
+//             if(document.getElementsByClassName('cardy')[i].id.includes("rnum")){
+//                         document.getElementsByClassName("cardy")[i].style.height="40px"
+                
+//             document.getElementsByClassName("cardy")[i].style.width="100%"
+//             }
+//        toobigcard.style.width="100%"
+
+//             toobigcard.style.height="40px"
+//    }
+// }} ettention
    document.getElementById('rnum'+(document.getElementById("robotdeck").children.length-1)).style.height=document.getElementById('rnum'+(document.getElementById("robotdeck").children.length-2)).style.height
    document.getElementById('rnum'+(document.getElementById("robotdeck").children.length-1)).style.position="initial"
    
@@ -3336,12 +3404,12 @@ document.getElementsByClassName('cardy')[altidToClass].id='rplayed'+(slotsfilled
    
 
     // document.getElementsByClassName('cardy')[altidToClass].style.backgroundImage="none"
-
+    //attention
+    document.getElementsByClassName('cardy')[altidToClass].style.position="relative"
+    document.getElementsByClassName('cardy')[altidToClass].style.backgroundImage="none"
+    document.getElementsByClassName('cardy')[altidToClass].style.color="black"
     document.getElementById('card'+(slotsfilled-1)).appendChild(document.getElementsByClassName('cardy')[altidToClass])
-    document.getElementById('card'+(slotsfilled-1)).children[1].style.position="relative"
-    document.getElementById('card'+(slotsfilled-1)).children[1].style.backgroundImage="none"
-    document.getElementById('card'+(slotsfilled-1)).children[1].style.color="black"
-    console.log( document.getElementById('card'+(slotsfilled-1)))
+   //attention over 
    
    //let played=document.createElement
    if(robotdeck.length==0&&playerdeck.length==0){
@@ -3835,6 +3903,7 @@ if(robotkozars.length==0){
                         takenCards.push(document.getElementById('rplayed'+i).innerHTML )
                         Take1(document.getElementById('rplayed'+i))
                         }
+                        console.log(i)
                         takenCards.push(document.getElementById('cardplayed'+i).innerHTML )
                     Take1(document.getElementById('cardplayed'+i))
                 }
