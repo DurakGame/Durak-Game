@@ -2268,17 +2268,54 @@ function Take1(toobigcard){
                                                        
                                              }}
     }
-
+    toobigcard.id='rnum'+(document.getElementById("robotdeck").children.length)
    document.getElementById('robotdeck').appendChild(toobigcard)
    toobigcard.style.backgroundImage= "url('backOcard.png')";
   // toobigcard.style.width="70%"
    toobigcard.style.backgroundPosition="center";
    toobigcard.style.backgroundRepeat="no-repeat";toobigcard.style.backgroundSize="cover";
    toobigcard.style.color="transparent"
-   toobigcard.id='rnum'+(document.getElementById("robotdeck").children.length-1)
+
    console.log(robotdeck)
    console.log(document.getElementById('robotdeck'))
    console.log( document.getElementById("robotdeck").children.length)
+   if(robotdeck.length<6){
+    for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+       console.log(document.getElementsByClassName('cardy')[i].id)
+        
+            if(document.getElementsByClassName('cardy')[i].id.includes("rnum")){
+                        document.getElementsByClassName("cardy")[i].style.height="100%"
+                
+            document.getElementsByClassName("cardy")[i].style.width="100%"
+            }
+      
+   }
+}else{
+   if(robotdeck.length<12){
+        for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+              console.log(document.getElementsByClassName('cardy')[i].id)
+        
+      // console.log(document.getElementById("rnum"+i).innerHTML)
+            if(document.getElementsByClassName('cardy')[i].id.includes("rnum")){
+                        document.getElementsByClassName("cardy")[i].style.height="60px"
+                
+            document.getElementsByClassName("cardy")[i].style.width="100%"
+            }
+      
+   }
+   }else{
+    for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+      // console.log(document.getElementById("rnum"+i).innerHTML)
+            if(document.getElementsByClassName('cardy')[i].id.includes("rnum")){
+                        document.getElementById("cardnum"+(i)).style.height="40px"
+                
+            document.getElementsByClassName("cardy")[i].style.width="100%"
+            }
+       toobigcard.style.width="100%"
+
+            toobigcard.style.height="40px"
+   }
+}}
    document.getElementById('rnum'+(document.getElementById("robotdeck").children.length-1)).style.height=document.getElementById('rnum'+(document.getElementById("robotdeck").children.length-2)).style.height
    document.getElementById('rnum'+(document.getElementById("robotdeck").children.length-1)).style.position="initial"
    
