@@ -552,6 +552,7 @@ function Gamesetup(x){
     console.log(z.id)
          gimmeCard=z.innerHTML[0]
     console.log(z)
+
 if(Ourturn==true){
     console.log(toggle)
     console.log(slotsfilled)
@@ -1918,6 +1919,7 @@ function HumanTakeCaller(){
             if(!TakingNow) {if(testerForMoveCard()==true){
             console.log('hey')
             console.log(z.id)
+            gimmeCard=z.innerHTML[0]
             console.log(z)
         if(Ourturn==true){
             console.log(toggle)
@@ -2525,6 +2527,7 @@ z.onclick=function MoveCard(){
     if(!TakingNow) {if(testerForMoveCard()==true){
     console.log('hey')
     console.log(z.id)
+    gimmeCard=z.innerHTML[0]
     console.log(z)
 if(Ourturn==true){
     console.log(toggle)
