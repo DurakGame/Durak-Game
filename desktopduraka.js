@@ -1710,7 +1710,7 @@ for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
         for(let i=0;i<(slotsfilled);i++){
             for(let j=0;j<document.getElementsByClassName('cardy').length;j++){
                 console.log(document.getElementsByClassName('cardy')[j].innerHTML)
-                if(document.getElementsByClassName('cardy')[j].style.borderColor=="yellow"){
+               
                    let wwyellow=document.getElementsByClassName('cardy')[j].innerHTML
                    wwyellow=(wwyellow.slice(0,wwyellow.length-1))
                     console.log("damn"+wwyellow)
@@ -1798,7 +1798,7 @@ for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
                         document.getElementById('infobox').innerHTML="Can't play this card"
                     }
             
-                }}
+                }
         }
 //PASTE HERE    
 } else{
