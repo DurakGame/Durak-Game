@@ -1,0 +1,260 @@
+#game{
+    visibility: hidden;
+    width: 85%;
+    margin-left: 8%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+body{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  padding: 0%;
+  margin: 0%;
+}
+#deck{
+    margin-right: 0%;
+    /* margin-left: 20%; */
+  /*  height: 30vh; */
+    border: 2px black solid;
+    border-radius: 5%;
+
+}
+.slot{
+  
+}
+
+#playingarea{
+  margin-left: 2%;
+width: 98%;
+  height: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+   /* height: 300px;*/
+   
+}
+
+.cardy{
+    border-radius: 5%;
+    font-size: 3.5vh;
+   height: 90%;
+    width: fit-content;
+    border: 2px black solid;
+    
+}
+#bottomGrid{
+  display: grid;
+
+  grid-template-rows: 20% 60% 20%;
+}
+#bottom{
+height: fit-content;
+    margin-left: 0%;
+    border-bottom: 2px red solid;
+    border-top: 2px red solid;
+    border-right: 2px red solid;
+    border-radius: 5%;
+}
+#bottomvalue{
+  position: relative;
+}
+/*
+
+.sb6:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #00bfb6;
+  border-top: 10px solid #00bfb6;
+  border-bottom: 10px solid transparent;
+  left: -21px;
+  top: 6px;
+}
+
+.sb6:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 7px solid transparent;
+  border-right: 7px solid #fff;
+  border-top: 7px solid #fff;
+  border-bottom: 7px solid transparent;
+  left: -11px;
+  top: 10px;
+}
+*/
+
+.box1 {
+  border: 3px solid #00bfb6;
+  top: 0;
+ 
+height: fit-content;
+max-height: 8vh;
+font-size: medium;
+  text-align: center;
+  font-weight: 900;
+  color: #00bfb6;
+  font-family: arial;
+ /* position: relative;*/
+}
+
+#trash{
+    visibility: hidden;
+    border: 2px purple solid;
+    border-radius: 25%;
+}
+#trash p{
+  margin-top: 30%;
+  text-align: center;
+}
+#parentdeck{
+ 
+display: grid;
+
+grid-template-columns: 60% 20%;
+column-gap: 0%;
+
+}
+#rplayed0{
+  top: -175px;
+}
+#rplayed1{
+  top: -175px;
+}
+#TakeButton{
+  border-radius: 40%;
+    
+    border: 4px red solid;
+    
+    text-align: center;
+}
+#rplayed2{
+  top: -175px;
+}
+#rplayed3{
+  top: -175px;
+  
+}
+#rplayed4{
+  top: -175px;
+}
+#rplayed5{
+  top: -175px;
+}
+#rplayed6{
+  top: -175px;
+}
+#rplayed7{
+  top: -175px;
+}
+#header{
+  width: 100%;
+top: 0px;
+position: absolute;
+margin: 0px;
+  display: grid;
+  grid-template-columns: 75% 21%;
+  column-gap: 3%;
+}
+#congrats{
+  visibility: hidden;
+  font-size: large;
+  border: red 5px solid;
+  height: 0px;
+  width: 0px;
+}
+#rowOne{
+  height: 100%;
+}
+#rowTwo{
+  height: 100%;
+}
+#rowThree{
+  height: 100%;
+}
+#rowFour{
+  height: 100%;
+}
+#robotdeck .cardy{
+  background-image: url(Downloads/backOcard.png);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  padding-top: 0px;
+  background-size: cover;
+  color: transparent;
+}
+#robotdeck{
+  height: 100%;
+    margin-top: 0px;
+    display: grid;
+   /* flex-direction: row; */
+   grid-template-columns: auto auto auto auto auto auto;
+column-gap: 2vw;
+row-gap: 2vh;
+margin-left: 2%;
+   width: 98%;
+   
+  
+    }
+    #playersdeck{
+      height: 100%;
+      margin-top: 0%;
+      display: grid;
+      grid-template-columns: auto auto auto auto auto auto;
+column-gap: 2vw;
+row-gap: 2vh;
+margin-left: 2%;
+width: 98%;
+    }
+  #robotdeck .cardy{
+    top: 75px;
+    height:100px ;
+  }
+#card {
+  height: 200px;
+    
+  }
+  #endturn{
+    border-radius: 40%;
+    
+    border: 4px green solid;
+    font-size:large ;
+    text-align: center;
+  }
+  #endturn p{
+    margin-top: 20%;
+    
+  }
+  #playersbuttons{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display:grid;
+    grid-template-columns: 30% 30% 30% ;
+    column-gap: 3%;
+  
+    margin-top: auto;
+  }
+
+  #Big{
+   margin-left: 0vw; 
+   width: 98%;
+   padding-left: 0%;
+  padding-top: 0px;
+    display: grid;
+    grid-template-rows: 20% 40% 30% 10%;
+  }
+  #columnOne{
+    padding-left: 0%;
+    display: grid;
+    grid-template-rows:  20vh 25vh 20vh 10vh;
+    margin-top: 0%;
+    row-gap: 1vh;
+  }
+  #columnTwo{
+    display: grid;
+    grid-template-rows: 16vh 30vh 50vh;
+  }
