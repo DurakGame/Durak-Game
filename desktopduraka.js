@@ -1676,19 +1676,19 @@ function MoveCard(id){
    //console.log(id)
     //console.log(document.getElementById(id).innerHTML)
     console.log(playerdeck)
-    let noOtherCardYellow=true;
-    for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-        if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"&&document.getElementsByClassName('cardy')[i].id!=id){
+   // let noOtherCardYellow=true;
+    // for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+    //     if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"&&document.getElementsByClassName('cardy')[i].id!=id){
 
-            noOtherCardYellow=false;
-        }
-    }
+    //         noOtherCardYellow=false;
+    //     }
+    // }
     testerForMoveCard()
     console.log(testerForMoveCard())
     if(!TakingNow){
     if(testerForMoveCard()==true){
         console.log(Ourturn)
-    if(Ourturn&&noOtherCardYellow){
+    if(Ourturn){
         //start of c&p from movecard2 dec 25 10pm
         console.log("fu")
         if(document.getElementById(id).parentElement=="parentsdeck"){
