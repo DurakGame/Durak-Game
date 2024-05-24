@@ -2863,9 +2863,9 @@ smallest.push(robotdeck[i].value)
                          
                     document.getElementById('infobox').innerHTML="Computer has smallest kozar, computer starts"
                     Start()
+                        
                     }
-                }
-                if(playerdeck[i].suit==kozar){
+                } else{if(playerdeck[i].suit==kozar){
                     if(playerdeck[i].value==smallest[0]){
                        first='player'
                          
@@ -2875,6 +2875,7 @@ smallest.push(robotdeck[i].value)
                        document.getElementById('endturn').value=false
                         }
                 }
+            }
             }
             
 if(first==first){
