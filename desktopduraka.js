@@ -2860,6 +2860,7 @@ smallest.push(robotdeck[i].value)
                 if(robotdeck[i].suit==kozar){
                     if(robotdeck[i].value==smallest[0]){
                        first='robot'
+                       Ourturn=false
                          
                     document.getElementById('infobox').innerHTML="Computer has smallest kozar, computer starts"
                     Start()
@@ -2868,7 +2869,7 @@ smallest.push(robotdeck[i].value)
                 } else{if(playerdeck[i].suit==kozar){
                     if(playerdeck[i].value==smallest[0]){
                        first='player'
-                         
+                         Ourturn=true
                         document.getElementById('infobox').innerHTML="You have smallest kozar, you start"
                        console.log("frck"+ document.getElementById('infobox').getBoundingClientRect().height)
                       //document.getElementById("header").style.minHeight=document.getElementById('infobox').getBoundingClientRect().height+10+"px"
