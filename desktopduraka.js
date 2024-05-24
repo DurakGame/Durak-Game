@@ -384,13 +384,19 @@ for(let i=playerdeck.length;i<6;i++){
  //cp from same tiem
  z.onclick=function MoveCard(){ 
     console.log(Ourturn)
+    let noOtherCardYellow=true;
     if(!TakingNow) {
         if(testerForMoveCard()==true){
     console.log('hey')
     console.log(z.id)
     console.log(z)
         gimmeCard=z.innerHTML
-if(Ourturn==true){
+        for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+            if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+                noOtherCardYellow=false;
+            }
+        }
+if(Ourturn&&noOtherCardYellow){
     console.log(toggle)
     console.log(slotsfilled)
    if(toggle%2==1){
@@ -404,8 +410,12 @@ toggle++
 }
     }
 } else{
-
-if(Ourturn==true){
+    for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+            noOtherCardYellow=false;
+        }
+    }
+if(Ourturn&&noOtherCardYellow){
     console.log(toggle)
    if(toggle%2==1){
 
@@ -424,6 +434,12 @@ toggle++
 }
 }
 }} else{
+    for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+            noOtherCardYellow=false;
+        }
+    }
+    if(noOtherCardYellow){
     if(toggle%2==1){
         z.style.border="8px yellow solid"
         document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
@@ -433,6 +449,7 @@ toggle++
         document.getElementById('card'+slotsfilled).style.border="initial"
         toggle++
         }
+    }
     console.log(takenCards)
     let zz=0; 
     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
@@ -545,17 +562,62 @@ function Gamesetup(x){
    // z.setAttribute("oclick","Movecard(this.id)")  
    z.onclick=function MoveCard(){ 
     console.log(Ourturn)
+    let noOtherCardYellow=true;
     if(!TakingNow) {
-        console.log("nottaking now")
-    if(testerForMoveCard()==true){
+        if(testerForMoveCard()==true){
     console.log('hey')
     console.log(z.id)
-         gimmeCard=z.innerHTML
     console.log(z)
-
-if(Ourturn==true){
+        gimmeCard=z.innerHTML
+        for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+            if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+                noOtherCardYellow=false;
+            }
+        }
+if(Ourturn&&noOtherCardYellow){
     console.log(toggle)
     console.log(slotsfilled)
+   if(toggle%2==1){
+z.style.border="8px yellow solid"
+document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
+toggle++
+} else{
+z.style.border="2px black solid"
+document.getElementById('card'+slotsfilled).style.border="initial"
+toggle++
+}
+    }
+} else{
+    for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+            noOtherCardYellow=false;
+        }
+    }
+if(Ourturn&&noOtherCardYellow){
+    console.log(toggle)
+   if(toggle%2==1){
+
+z.style.border="8px yellow solid"
+HumanBeat(document.getElementById(z.id))
+for(let i=0;i<slotsfilled;i++){
+   // document.getElementById('rplayed'+i).style.border="4px blue dashed" may 4
+}
+toggle++
+} else{
+document.getElementById(z.id).style.border="2px black solid"
+for(let i=0;i<slotsfilled;i++){
+    document.getElementById('rplayed'+i).style.border="2px black solid"
+}
+toggle++
+}
+}
+}} else{
+    for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+            noOtherCardYellow=false;
+        }
+    }
+    if(noOtherCardYellow){
     if(toggle%2==1){
         z.style.border="8px yellow solid"
         document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
@@ -566,37 +628,6 @@ if(Ourturn==true){
         toggle++
         }
     }
-} else{
-
-if(Ourturn==true){
-    console.log(toggle)
-    
-   if(toggle%2==1){
-z.style.border="8px yellow solid"
-HumanBeat(document.getElementById(z.id))
-for(let i=0;i<slotsfilled;i++){
- //   document.getElementById('rplayed'+i).style.border="4px blue dashed"may 4
-}
-toggle++
-} else{
-document.getElementById(z.id).style.border="2px black solid"
-for(let i=0;i<slotsfilled;i++){
-    document.getElementById('rplayed'+i).style.border="2px black solid"
-}
-toggle++
-}
-
-}
-}} else{
-    if(toggle%2==1){
-        z.style.border="8px yellow solid"
-        document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
-        toggle++
-        } else{
-        z.style.border="2px black solid"
-        document.getElementById('card'+slotsfilled).style.border="initial"
-        toggle++
-        }
     console.log(takenCards)
     let zz=0; 
     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
@@ -807,13 +838,20 @@ z.id="cardnum"+i
 //  z.setAttribute("onclick","MoveCard("+this.id+")"); slashed 12/25 10:05pm
 //cp from same tiem
 z.onclick=function MoveCard(){ 
-     gimmeCard=z.innerHTML
     console.log(Ourturn)
-    if(!TakingNow) {if(testerForMoveCard()==true){
+    let noOtherCardYellow=true;
+    if(!TakingNow) {
+        if(testerForMoveCard()==true){
     console.log('hey')
     console.log(z.id)
     console.log(z)
-if(Ourturn==true){
+        gimmeCard=z.innerHTML
+        for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+            if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+                noOtherCardYellow=false;
+            }
+        }
+if(Ourturn&&noOtherCardYellow){
     console.log(toggle)
     console.log(slotsfilled)
    if(toggle%2==1){
@@ -827,8 +865,12 @@ toggle++
 }
     }
 } else{
-
-if(Ourturn==true){
+    for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+            noOtherCardYellow=false;
+        }
+    }
+if(Ourturn&&noOtherCardYellow){
     console.log(toggle)
    if(toggle%2==1){
 
@@ -847,6 +889,12 @@ toggle++
 }
 }
 }} else{
+    for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+            noOtherCardYellow=false;
+        }
+    }
+    if(noOtherCardYellow){
     if(toggle%2==1){
         z.style.border="8px yellow solid"
         document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
@@ -856,6 +904,7 @@ toggle++
         document.getElementById('card'+slotsfilled).style.border="initial"
         toggle++
         }
+    }
     console.log(takenCards)
     let zz=0; 
     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
@@ -1198,11 +1247,19 @@ for(let i=(op);i<playerdeck.length;i++){
 //cp from same tiem
 z.onclick=function MoveCard(){ 
     console.log(Ourturn)
-    if(!TakingNow) {if(testerForMoveCard()==true){
+    let noOtherCardYellow=true;
+    if(!TakingNow) {
+        if(testerForMoveCard()==true){
     console.log('hey')
     console.log(z.id)
     console.log(z)
-if(Ourturn==true){
+        gimmeCard=z.innerHTML
+        for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+            if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+                noOtherCardYellow=false;
+            }
+        }
+if(Ourturn&&noOtherCardYellow){
     console.log(toggle)
     console.log(slotsfilled)
    if(toggle%2==1){
@@ -1216,16 +1273,19 @@ toggle++
 }
     }
 } else{
-
-if(Ourturn==true){
+    for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+            noOtherCardYellow=false;
+        }
+    }
+if(Ourturn&&noOtherCardYellow){
     console.log(toggle)
    if(toggle%2==1){
 
 z.style.border="8px yellow solid"
 HumanBeat(document.getElementById(z.id))
-
 for(let i=0;i<slotsfilled;i++){
- //   document.getElementById('rplayed'+i).style.border="4px blue dashed" may 4
+   // document.getElementById('rplayed'+i).style.border="4px blue dashed" may 4
 }
 toggle++
 } else{
@@ -1237,6 +1297,12 @@ toggle++
 }
 }
 }} else{
+    for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+            noOtherCardYellow=false;
+        }
+    }
+    if(noOtherCardYellow){
     if(toggle%2==1){
         z.style.border="8px yellow solid"
         document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
@@ -1246,6 +1312,7 @@ toggle++
         document.getElementById('card'+slotsfilled).style.border="initial"
         toggle++
         }
+    }
     console.log(takenCards)
     let zz=0; 
     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
@@ -1375,7 +1442,7 @@ console.log(playerdeck)
 }, "1000");
 }
 function Movecard2(id){
-    console.log(id)
+    console.log("DPES THIS EVEN HAPPEN??")
     console.log(document.getElementById(id).innerHTML)
         if(testerForMoveCard()==true){
     console.log(id)
@@ -1609,12 +1676,18 @@ function MoveCard(id){
    //console.log(id)
     //console.log(document.getElementById(id).innerHTML)
     console.log(playerdeck)
+    let noOtherCardYellow=true;
+    for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+            noOtherCardYellow=false;
+        }
+    }
     testerForMoveCard()
     console.log(testerForMoveCard())
     if(!TakingNow){
     if(testerForMoveCard()==true){
         console.log(Ourturn)
-    if(Ourturn==true){
+    if(Ourturn&&noOtherCardYellow){
         //start of c&p from movecard2 dec 25 10pm
         console.log("fu")
         if(document.getElementById(id).parentElement=="parentsdeck"){
@@ -1854,7 +1927,7 @@ for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
     }
 } else{
     HumanBeat()
-    if(Ourturn==true){
+    if(Ourturn&&noOtherCardYellow){
         console.log(toggle)
        if(toggle%2==1){
     document.getElementById(z.id).style.border="8px yellow solid"
@@ -1952,12 +2025,19 @@ function HumanTakeCaller(){
         let z=document.getElementById('playersdeck').children[i]
         z.onclick=function MoveCard(){ 
             console.log(Ourturn)
-            if(!TakingNow) {if(testerForMoveCard()==true){
+            let noOtherCardYellow=true;
+            if(!TakingNow) {
+                if(testerForMoveCard()==true){
             console.log('hey')
             console.log(z.id)
-            gimmeCard=z.innerHTML
             console.log(z)
-        if(Ourturn==true){
+                gimmeCard=z.innerHTML
+                for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+                    if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+                        noOtherCardYellow=false;
+                    }
+                }
+        if(Ourturn&&noOtherCardYellow){
             console.log(toggle)
             console.log(slotsfilled)
            if(toggle%2==1){
@@ -1971,15 +2051,19 @@ function HumanTakeCaller(){
         }
             }
         } else{
-        
-        if(Ourturn==true){
+            for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+                if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+                    noOtherCardYellow=false;
+                }
+            }
+        if(Ourturn&&noOtherCardYellow){
             console.log(toggle)
            if(toggle%2==1){
         
         z.style.border="8px yellow solid"
         HumanBeat(document.getElementById(z.id))
         for(let i=0;i<slotsfilled;i++){
-          //  document.getElementById('rplayed'+i).style.border="4px blue dashed" may 4
+           // document.getElementById('rplayed'+i).style.border="4px blue dashed" may 4
         }
         toggle++
         } else{
@@ -1991,6 +2075,12 @@ function HumanTakeCaller(){
         }
         }
         }} else{
+            for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+                if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+                    noOtherCardYellow=false;
+                }
+            }
+            if(noOtherCardYellow){
             if(toggle%2==1){
                 z.style.border="8px yellow solid"
                 document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
@@ -2000,6 +2090,7 @@ function HumanTakeCaller(){
                 document.getElementById('card'+slotsfilled).style.border="initial"
                 toggle++
                 }
+            }
             console.log(takenCards)
             let zz=0; 
             for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
@@ -2597,12 +2688,19 @@ for(let i=(op);i<playerdeck.length;i++){
 //cp from same tiem
 z.onclick=function MoveCard(){ 
     console.log(Ourturn)
-    if(!TakingNow) {if(testerForMoveCard()==true){
+    let noOtherCardYellow=true;
+    if(!TakingNow) {
+        if(testerForMoveCard()==true){
     console.log('hey')
     console.log(z.id)
-    gimmeCard=z.innerHTML
     console.log(z)
-if(Ourturn==true){
+        gimmeCard=z.innerHTML
+        for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+            if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+                noOtherCardYellow=false;
+            }
+        }
+if(Ourturn&&noOtherCardYellow){
     console.log(toggle)
     console.log(slotsfilled)
    if(toggle%2==1){
@@ -2616,15 +2714,19 @@ toggle++
 }
     }
 } else{
-
-if(Ourturn==true){
+    for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+            noOtherCardYellow=false;
+        }
+    }
+if(Ourturn&&noOtherCardYellow){
     console.log(toggle)
    if(toggle%2==1){
 
 z.style.border="8px yellow solid"
 HumanBeat(document.getElementById(z.id))
 for(let i=0;i<slotsfilled;i++){
-    //document.getElementById('rplayed'+i).style.border="4px blue dashed" may 4
+   // document.getElementById('rplayed'+i).style.border="4px blue dashed" may 4
 }
 toggle++
 } else{
@@ -2636,6 +2738,12 @@ toggle++
 }
 }
 }} else{
+    for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+            noOtherCardYellow=false;
+        }
+    }
+    if(noOtherCardYellow){
     if(toggle%2==1){
         z.style.border="8px yellow solid"
         document.getElementById('card'+slotsfilled).style.border="1px dashed blue"
@@ -2645,6 +2753,7 @@ toggle++
         document.getElementById('card'+slotsfilled).style.border="initial"
         toggle++
         }
+    }
     console.log(takenCards)
     let zz=0; 
     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
@@ -2673,17 +2782,7 @@ toggle++
                   
                 document.getElementById("infobox").innerHTML="Can't give this card idiot"
             }
-            if(robotdeck.length>6){
-                for(let i=0;i<robotdeck.length;i++){
-                    console.log(document.getElementById("rnum"+i).innerHTML)
-                    document.getElementById("rnum"+(i)).style.height="75px"
-                }
-            }      else{
-                for(let i=0;i<robotdeck.length;i++){
-                    console.log(document.getElementById("rnum"+i).innerHTML)
-                    document.getElementById("rnum"+(i)).style.height="initial"
-                }
-            }
+            
 }}
  
 
