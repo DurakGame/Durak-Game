@@ -392,7 +392,7 @@ for(let i=playerdeck.length;i<6;i++){
     console.log(z)
         gimmeCard=z.innerHTML
         for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-            if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+            if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"){
                 noOtherCardYellow=false;
             }
         }
@@ -411,7 +411,7 @@ toggle++
     }
 } else{
     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"){
             noOtherCardYellow=false;
         }
     }
@@ -435,7 +435,7 @@ toggle++
 }
 }} else{
     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"){
             noOtherCardYellow=false;
         }
     }
@@ -570,7 +570,7 @@ function Gamesetup(x){
     console.log(z)
         gimmeCard=z.innerHTML
         for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-            if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+            if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"){
                 noOtherCardYellow=false;
             }
         }
@@ -589,7 +589,7 @@ toggle++
     }
 } else{
     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"){
             noOtherCardYellow=false;
         }
     }
@@ -613,7 +613,7 @@ toggle++
 }
 }} else{
     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"){
             noOtherCardYellow=false;
         }
     }
@@ -847,7 +847,7 @@ z.onclick=function MoveCard(){
     console.log(z)
         gimmeCard=z.innerHTML
         for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-            if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+            if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"){
                 noOtherCardYellow=false;
             }
         }
@@ -866,7 +866,7 @@ toggle++
     }
 } else{
     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"){
             noOtherCardYellow=false;
         }
     }
@@ -890,7 +890,7 @@ toggle++
 }
 }} else{
     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"){
             noOtherCardYellow=false;
         }
     }
@@ -1255,7 +1255,7 @@ z.onclick=function MoveCard(){
     console.log(z)
         gimmeCard=z.innerHTML
         for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-            if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+            if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"){
                 noOtherCardYellow=false;
             }
         }
@@ -1274,7 +1274,7 @@ toggle++
     }
 } else{
     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"){
             noOtherCardYellow=false;
         }
     }
@@ -1298,7 +1298,7 @@ toggle++
 }
 }} else{
     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"){
             noOtherCardYellow=false;
         }
     }
@@ -1678,7 +1678,7 @@ function MoveCard(id){
     console.log(playerdeck)
     let noOtherCardYellow=true;
     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"){
             noOtherCardYellow=false;
         }
     }
@@ -2033,7 +2033,7 @@ function HumanTakeCaller(){
             console.log(z)
                 gimmeCard=z.innerHTML
                 for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-                    if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+                    if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"){
                         noOtherCardYellow=false;
                     }
                 }
@@ -2052,7 +2052,7 @@ function HumanTakeCaller(){
             }
         } else{
             for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-                if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+                if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"){
                     noOtherCardYellow=false;
                 }
             }
@@ -2076,7 +2076,7 @@ function HumanTakeCaller(){
         }
         }} else{
             for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-                if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+                if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"){
                     noOtherCardYellow=false;
                 }
             }
@@ -2696,7 +2696,7 @@ z.onclick=function MoveCard(){
     console.log(z)
         gimmeCard=z.innerHTML
         for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-            if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+            if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"){
                 noOtherCardYellow=false;
             }
         }
@@ -2715,7 +2715,7 @@ toggle++
     }
 } else{
     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"){
             noOtherCardYellow=false;
         }
     }
@@ -2739,7 +2739,7 @@ toggle++
 }
 }} else{
     for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
-        if(document.getElementsByClassName('cardy')[i].style.borderColor="yellow"){
+        if(document.getElementsByClassName('cardy')[i].style.borderColor=="yellow"){
             noOtherCardYellow=false;
         }
     }
