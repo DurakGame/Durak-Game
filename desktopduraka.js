@@ -4022,7 +4022,7 @@ for(let i=0;i<robotnormals.length;i++){
 } else{
     //this is if they give u a kozar
     //document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[1]!=kozar&&document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[2]!=kozar
-console.log('ahhh')
+console.log('ahhh'+robotkozars[0]+" "+robotkozars[1])
 console.log(robotkozars)
 console.log(robotkozars.length )
 console.log(deck.cards.length)
