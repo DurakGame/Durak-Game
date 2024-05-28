@@ -4036,6 +4036,7 @@ console.log(robotkozars)
 console.log(robotkozars.length )
 console.log(deck.cards.length)
 console.log(slotsfilled)
+let haveBigEnoughKozar=false
 if((document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[1]==kozar )&&(!((document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0])!='6'&&(document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0])!='7'&&(document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0])!='8'&&(document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0]-0)!='9'  )==false) ){
   
 for(let i=0;i<robotkozars.length;i++){
@@ -4045,6 +4046,9 @@ for(let i=0;i<robotkozars.length;i++){
         robotkozars.splice(i,1)
         i--;
     }
+}
+if(robotkozars.length>0){
+    haveBigEnoughKozar=true
 }
     
 }else{
@@ -4056,7 +4060,6 @@ for(let i=0;i<robotkozars.length;i++){
     }
 }
 }
-let haveBigEnoughKozar=false
 //console.log(document.getElementById('cardplayed'+i))
 for(let i=0;i<robotkozars.length;i++){
  if(document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0]==Queen) {
@@ -4070,7 +4073,7 @@ haveBigEnoughKozar=true
     }
  }  
 }
-if(robotkozars.length==0||haveBigEnoughKozar==false){
+if(haveBigEnoughKozar==false){
     
      takenCards=[];rox=robotdeck.length
     for(let i=(slotsfilled-1);i>-1;i--){
