@@ -1058,7 +1058,7 @@ function robotProvide(){
 
     console.log("PROVIDENCE")
     setTimeout(() => {
-if(playerdeck.length>0){
+if(playerdeck.length>0||deck.cards.length>0){
     Ourturn=true
 let ww=[]
 let ops=[]
@@ -1861,7 +1861,7 @@ for(let i=0;i<document.getElementsByClassName('cardy').length;i++){
                      document.getElementById('card'+slotsfilled).style.border="initial"
                      slotsfilled++
                     toggle++
-                            if(playerdeck.length==0){
+                            if(playerdeck.length==0&&deck.cards.length==0){
 
                             document.getElementById("infobox").innerHTML="You won!"
 
@@ -2372,7 +2372,7 @@ console.log(playerdeck)
 //fsRestock(playerdeck)
 //fsRestock(robotdeck)
 //robotDeckRestock(robotdeck)
-if(robotdeck.length==0){
+if(robotdeck.length==0&&deck.cards.length==0){
 console.log("game over!")
 document.getElementById("infobox").innerHTML="You lost!"
 isGameover=true
@@ -2510,7 +2510,7 @@ console.log(toobigcard.innerHTML[0]==Jack)
 console.log(playerdeck)
 permaTBG=toobigcard
 
-if(playerdeck.length==0){
+if(playerdeck.length==0&&deck.cards.length==0){
     console.log("game over!")
       
     document.getElementById("infobox").innerHTML="You won!"
@@ -2588,7 +2588,7 @@ console.log(playerdeck)
 
 console.log(playerdeck)
 
-if(playerdeck.length==0){
+if(playerdeck.length==0&&deck.cards.length==0){
     console.log("game over!")
       
     document.getElementById("infobox").innerHTML="You won!"
@@ -3054,7 +3054,7 @@ console.log(index)
  document.querySelector('#card'+slotsfilled).children[0].style.color="black"
 document.querySelector('#card'+slotsfilled).children[0].style.height="90%";
         
-if(robotdeck.length==0){
+if(robotdeck.length==0&&deck.cards.length==0){
 
     document.getElementById("infobox").innerHTML="You lost!"
 
@@ -3244,7 +3244,7 @@ let c2v=0;
                      }, 1000);
                     return;
                 } else{
-                    if(robotdeck.length==0){
+                    if(robotdeck.length==0&&deck.cards.length==0){
                           
                         document.getElementById("infobox").innerHTML="You lost!"
                         isGameover=true
@@ -3253,7 +3253,7 @@ let c2v=0;
                          }, 1000);
                         return;
                     }
-                    if(playerdeck.length==0){
+                    if(playerdeck.length==0&&deck.cards.length==0){
                           
                         document.getElementById("infobox").innerHTML="You won!"
                         isGameover=true
@@ -3681,7 +3681,7 @@ document.getElementsByClassName('cardy')[altidToClass].id='rplayed'+(slotsfilled
      }, 1000);
     return;
 }else{
-    if(playerdeck.length==0){
+    if(playerdeck.length==0&&deck.cards.length==0){
         document.getElementById("infobox").innerHTML="You won!"
         isGameover=true
         setTimeout(function(){
@@ -3689,7 +3689,7 @@ document.getElementsByClassName('cardy')[altidToClass].id='rplayed'+(slotsfilled
          }, 1000);
         return;
     }
-    if(robotdeck.length==0){
+    if(robotdeck.length==0&&deck.cards.length==0){
         document.getElementById("infobox").innerHTML="You lost!"
         isGameover=true
         setTimeout(function(){
