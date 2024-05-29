@@ -1367,7 +1367,7 @@ toggle++
     robotnormals.push(robotdeck[i])
     }
 //cpends
-if(robotdeck.length==0){
+if(robotdeck.length==0&&deck.cards.length==0){
 
     document.getElementById("infobox").innerHTML="You lost!"
 
@@ -1611,6 +1611,7 @@ function uniq(a) {
     });
 }
 function RobotGiveExtra(){
+    chosenGiven=[]
     //let cardLength=2;
     console.log(takenCards2[0])
     for(let i=0;i<robotdeck.length;i++){
@@ -2491,8 +2492,8 @@ function Take1(toobigcard){
 //             toobigcard.style.height="40px"
 //    }
 // }} ettention
-   document.getElementById('rnum'+(document.getElementById("robotdeck").children.length-1)).style.height=document.getElementById('rnum'+(document.getElementById("robotdeck").children.length-2)).style.height
-   document.getElementById('rnum'+(document.getElementById("robotdeck").children.length-1)).style.position="initial"
+document.getElementById("robotdeck").children[document.getElementById("robotdeck").children.length-1].style.height=document.getElementById("robotdeck").children[document.getElementById("robotdeck").children.length-2].style.height
+document.getElementById("robotdeck").children[document.getElementById("robotdeck").children.length-1].style.position="initial"
    
     if(toobigcard.innerHTML.length>2){
     const takenCard= new Card(toobigcard.innerHTML[2],parseInt(toobigcard.innerHTML[0]+''+toobigcard.innerHTML[1]))
@@ -3671,7 +3672,7 @@ document.getElementsByClassName('cardy')[altidToClass].id='rplayed'+(slotsfilled
     document.getElementsByClassName('cardy')[altidToClass].style.color="black"
     document.getElementById('card'+(slotsfilled-1)).appendChild(document.getElementsByClassName('cardy')[altidToClass])
    //attention over 
-   
+   console.log(robotdeck)
    //let played=document.createElement
    if(robotdeck.length==0&&playerdeck.length==0){
     document.getElementById("infobox").innerHTML="Tie!"
@@ -4040,7 +4041,7 @@ let haveBigEnoughKozar=false
 if((document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[1]==kozar )&&(!((document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0])!='6'&&(document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0])!='7'&&(document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0])!='8'&&(document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0]-0)!='9'  )==false) ){
   
 for(let i=0;i<robotkozars.length;i++){
-    if(robotkozars[i].value==10||robotkozars[i].value>document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0] ){
+    if(robotkozars[i].value==10||robotkozars[i].value>document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0]||robotkozars[i].value==Ace||robotkozars[i].value==Queen||robotkozars[i].value==King||robotkozars[i].value==Jack ){
         
     }else{
         robotkozars.splice(i,1)
@@ -4062,13 +4063,14 @@ for(let i=0;i<robotkozars.length;i++){
 }
 //console.log(document.getElementById('cardplayed'+i))
 for(let i=0;i<robotkozars.length;i++){
+    console.log(robotkozars[i])
  if(document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0]==Queen) {
-    if(robotkozars[i]==King||robotkozars[i]==Ace){
+    if(robotkozars[i].value==King||robotkozars[i].value==Ace){
 haveBigEnoughKozar=true
     }
  }  
  if(document.getElementById('cardplayed'+(slotsfilled-1)).innerHTML[0]==King) {
-    if(robotkozars[i]==Ace){
+    if(robotkozars[i].value==Ace){
 haveBigEnoughKozar=true
     }
  }  
